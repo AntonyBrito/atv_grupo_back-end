@@ -1,0 +1,166 @@
+.aluno-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título */
+  .aluno-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  /* Formulário */
+  .aluno-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Grupos de formulário */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+  }
+  
+  /* Inputs */
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  /* Botões */
+  .form-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+  }
+  
+  .salvar-button {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .salvar-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .buscar-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .buscar-button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Lista de alunos */
+  .aluno-list {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .aluno-list h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.3rem;
+  }
+  
+  /* Itens da lista */
+  .aluno-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aluno-info {
+    flex-grow: 1;
+  }
+  
+  /* Botões de ação */
+  .aluno-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .action-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+  }
+  
+  .editar-button {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .editar-button:hover {
+    background-color: #e67e22;
+  }
+  
+  .excluir-button {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .excluir-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .aluno-container {
+      padding: 1rem;
+      margin: 1rem;
+    }
+    
+    .aluno-item {
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    
+    .aluno-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
