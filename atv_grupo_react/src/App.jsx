@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import Inicial from './page/initial_page.jsx';
-import Aluno from './page/aluno_page.jsx';
-import Professor from './page/professor_page.jsx';
-import Turma from './page/turma_page.jsx';
+import Inicial from './pages/aluno_page.jsx';
+import Aluno from './pages/aluno_page.jsx';
+import Professor from './pages/professor_page.jsx';
+import Turma from './pages/turma_page.jsx';
 import './App.css';
 
 function App() {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { alunoApi } from '../api/alunoApi';
 import '../assets/styles/aluno_page.css';
 
@@ -98,6 +99,12 @@ const AlunosPage = () => {
 
   return (
     <div className="alunos-container">
+      <div className="navigation-buttons">
+        <Link to="/">
+          <button className="back-button">Voltar</button>
+        </Link>
+      </div>
+
       <h1 className="alunos-title">Gerenciamento de Alunos</h1>
 
       {error && <div className="error-message">{error}</div>}
