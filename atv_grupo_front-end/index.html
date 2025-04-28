@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema Escolar</h1>
+    </header>
+    
+    <nav>
+        <button onclick="loadSection('aluno')">Alunos</button>
+        <button onclick="loadSection('professor')">Professores</button>
+        <button onclick="loadSection('turma')">Turmas</button>
+    </nav>
+    
+    <main id="content">
+        <!-- Conteúdo será carregado dinamicamente -->
+        <h2>Selecione uma opção no menu</h2>
+    </main>
+    
+    <script src="js/aluno.js"></script>
+    <script src="js/professor.js"></script>
+    <script src="js/turma.js"></script>
+    <script>
+        function loadSection(section) {
+            fetch(`templates/${section}-form.html`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('content').innerHTML = html;
+                    // Carrega os dados iniciais
+                    if (section === 'aluno') loadAlunos();
+                    else if (section === 'professor') loadProfessores();
+                    else if (section === 'turma') loadTurmas();
+                });
+        }
+    </script>
+</body>
+</html>

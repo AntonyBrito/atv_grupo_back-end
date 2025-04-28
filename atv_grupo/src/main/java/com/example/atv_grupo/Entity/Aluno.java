@@ -22,7 +22,7 @@ public class Aluno implements Serializable {
     private String cpf;
 
     @ManyToOne
-    @JoinColumn(name = "idCurso", referencedColumnName = "idCurso")
+    @JoinColumn(name = "idTurma", referencedColumnName = "idTurma")
     @JsonIgnoreProperties("alunos")
     private Turma turma;
 }

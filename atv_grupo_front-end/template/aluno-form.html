@@ -1,0 +1,24 @@
+<div id="aluno-content">
+    <h2>Alunos</h2>
+    <button onclick="showAlunoForm()">Adicionar Aluno</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Turma</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="alunos-table-body">
+            <!-- Dados serão carregados via JavaScript -->
+        </tbody>
+    </table>
+    <div id="aluno-form-container"></div>
+</div>
+
+<script>
+    // Carrega alunos quando a página é aberta
+    document.addEventListener('DOMContentLoaded', loadAlunos);
+</script>

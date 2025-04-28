@@ -1,0 +1,26 @@
+<div id="turma-content">
+    <h2>Turmas</h2>
+    <button onclick="showTurmaForm()">Adicionar Turma</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sigla</th>
+                <th>Sala</th>
+                <th>Professor</th>
+                <th>Alunos</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="turmas-table-body">
+            <!-- Dados serão carregados via JavaScript -->
+        </tbody>
+    </table>
+    <div id="turma-form-container"></div>
+</div>
+
+<script>
+    // Carrega turmas quando a página é aberta
+    document.addEventListener('DOMContentLoaded', loadTurmas);
+</script>

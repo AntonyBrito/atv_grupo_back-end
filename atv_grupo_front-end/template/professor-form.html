@@ -1,0 +1,24 @@
+<div id="professor-content">
+    <h2>Professores</h2>
+    <button onclick="showProfessorForm()">Adicionar Professor</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Turmas</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="professores-table-body">
+            <!-- Dados serão carregados via JavaScript -->
+        </tbody>
+    </table>
+    <div id="professor-form-container"></div>
+</div>
+
+<script>
+    // Carrega professores quando a página é aberta
+    document.addEventListener('DOMContentLoaded', loadProfessores);
+</script>
