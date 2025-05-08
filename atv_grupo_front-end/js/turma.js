@@ -74,7 +74,6 @@ function showTurmaForm(turma = null) {
     
     document.getElementById('turma-form-container').innerHTML = form;
     
-    // Carrega professores para o select
     fetch('http://localhost:8080/professor')
         .then(response => response.json())
         .then(professores => {

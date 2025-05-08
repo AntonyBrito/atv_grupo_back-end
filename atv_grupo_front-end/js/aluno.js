@@ -67,7 +67,6 @@ function showAlunoForm(aluno = null) {
     
     document.getElementById('aluno-form-container').innerHTML = form;
     
-    // Carrega turmas para o select
     fetch('http://localhost:8080/turma')
         .then(response => response.json())
         .then(turmas => {

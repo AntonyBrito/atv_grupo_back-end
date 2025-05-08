@@ -21,12 +21,4 @@ public class Professor implements Serializable {
 
     @OneToMany(mappedBy = "professor", cascade = CascadeType.ALL)
     private List<Turma> turma;
-
-
-    public Professor(Long idProfessor, String nome, String sobrenome, List<Turma> turma) {
-        this.idProfessor = idProfessor;
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.turma = turma;
-    }
 }

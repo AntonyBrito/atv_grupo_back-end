@@ -5,10 +5,12 @@ import com.example.atv_grupo.DTO.TurmaDTOResponse;
 import com.example.atv_grupo.Entity.Turma;
 import com.example.atv_grupo.Repository.TurmaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class TurmaService {
     @Autowired
     private TurmaRepository turmaRepository;

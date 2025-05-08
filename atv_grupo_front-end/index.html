@@ -18,7 +18,6 @@
     </nav>
     
     <main id="content">
-        <!-- Conteúdo será carregado dinamicamente -->
         <h2>Selecione uma opção no menu</h2>
     </main>
     
@@ -31,7 +30,6 @@
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('content').innerHTML = html;
-                    // Carrega os dados iniciais
                     if (section === 'aluno') loadAlunos();
                     else if (section === 'professor') loadProfessores();
                     else if (section === 'turma') loadTurmas();
