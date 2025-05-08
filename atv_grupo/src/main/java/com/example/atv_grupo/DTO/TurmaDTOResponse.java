@@ -13,7 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TurmaDTOResponse {
-
     private Long id;
     private String sigla;
     private int numeroSala;

@@ -23,6 +23,6 @@ public class Aluno implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "idTurma", referencedColumnName = "idTurma")
-    @JsonIgnoreProperties("alunos")
+    @JsonIgnoreProperties({"professor", "alunos"})
     private Turma turma;
 }

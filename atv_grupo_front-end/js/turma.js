@@ -50,7 +50,7 @@ function showTurmaForm(turma = null) {
     const form = `
         <h3>${turma ? 'Editar Turma' : 'Adicionar Turma'}</h3>
         <form id="turma-form" onsubmit="handleTurmaSubmit(event)">
-            <input type="hidden" id="idTurma" value="${turma ? turma.idTurma : ''}">
+            <input type="hidden" id="idTurma" value="${turma ? turma.id : ''}">
             
             <label for="nome">Nome:</label>
             <input type="text" id="nome" value="${turma ? turma.nome : ''}" required>
@@ -93,8 +93,7 @@ function showTurmaForm(turma = null) {
 function handleTurmaSubmit(event) {
     event.preventDefault();
     
-    const turma = {
-        idTurma: document.getElementById('idTurma').value || null,
+    const turmaData = {
         nome: document.getElementById('nome').value,
         sigla: document.getElementById('sigla').value,
         numeroSala: parseInt(document.getElementById('numeroSala').value),
@@ -103,15 +102,18 @@ function handleTurmaSubmit(event) {
         }
     };
     
-    const method = turma.idTurma ? 'PUT' : 'POST';
-    const url = turma.idTurma ? `${TURMA_API_URL}/${turma.idTurma}` : TURMA_API_URL;
-    
+    let idTurmaRaw = document.getElementById('idTurma').value;
+    let idTurma = idTurmaRaw && !isNaN(parseInt(idTurmaRaw)) ? parseInt(idTurmaRaw) : null;
+    const method = idTurma ? 'PUT' : 'POST';
+    const url = idTurma ? `${TURMA_API_URL}/${idTurma}` : TURMA_API_URL;
+    console.log(idTurma)
+    console.log(method, url)
     fetch(url, {
         method: method,
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(turma)
+        body: JSON.stringify(turmaData)
     })
     .then(response => response.json())
     .then(() => {
@@ -124,7 +126,10 @@ function handleTurmaSubmit(event) {
 function editTurma(id) {
     fetch(`${TURMA_API_URL}/${id}`)
         .then(response => response.json())
-        .then(turma => showTurmaForm(turma))
+        .then(turma => {
+            console.log('Turma carregada para edição:', turma);
+            showTurmaForm(turma);
+        })
         .catch(error => console.error('Error:', error));
 }
 

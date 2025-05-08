@@ -1,5 +1,6 @@
 package com.example.atv_grupo.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,5 +21,6 @@ public class Professor implements Serializable {
     private String sobrenome;
 
     @OneToMany(mappedBy = "professor", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("professor")
     private List<Turma> turma;
 }

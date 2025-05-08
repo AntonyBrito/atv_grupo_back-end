@@ -96,7 +96,7 @@ function handleAlunoSubmit(event) {
     };
     
     const method = aluno.idAluno ? 'PUT' : 'POST';
-    const url = aluno.idAlano ? `${API_URL}/${aluno.idAluno}` : API_URL;
+    const url = aluno.idAluno ? `${API_URL}/${aluno.idAluno}` : API_URL;
     
     fetch(url, {
         method: method,
